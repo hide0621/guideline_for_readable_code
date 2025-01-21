@@ -21,5 +21,5 @@ void updateViewProperties(ViewType viewType) {
 }
 
 void code1_3() {
-  print('Hello, World!');
+  print('code1_3');
 }
