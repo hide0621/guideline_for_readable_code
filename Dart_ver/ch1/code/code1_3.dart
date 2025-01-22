@@ -1,3 +1,28 @@
+/// ボーイスカウトルールに則ってないコード
+
+// enum ViewType {
+//   A,
+//   B,
+//   Y,
+// }
+
+// void updateViewProperties(ViewType viewType) {
+//   switch (viewType) {
+//     case ViewType.A:
+//       // view1.isVisible = true;
+//       // view2.text = 'Case A';
+//       break;
+//     case ViewType.B:
+//       // view1.isVisible = false;
+//       // view2.text = 'Case B';
+//       break;
+//     case ViewType.Y:
+//       // view1.isVisible = true;
+//       // view2.text = 'Case Y';
+//       break;
+//   }
+// }
+
 /// ボーイスカウトルールに則ってリファクタリングしたコード
 
 enum ViewType {
