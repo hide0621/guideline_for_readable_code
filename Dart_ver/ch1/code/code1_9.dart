@@ -93,7 +93,7 @@ class Coodinate2 {
     }
 
     // switch文の別の表現方法
-    // こっちの方が読みやすいし、スッキリしている
+    // こっちの方が読みやすいし、スッキリしているし、returnが先に来るので分かりやすい
     return switch (to) {
       UnitType.PIXEL => value * environment.pixelPerInch / POINTS_PER_INCH,
       UnitType.POINT => value * POINTS_PER_INCH / environment.pixelPerInch,
