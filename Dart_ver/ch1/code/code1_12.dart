@@ -2,13 +2,13 @@
  * ただし、以下のコードはpubspec.yamlにrxdartの依存関係を追加する必要がある
  */
 // import 'package:rxdart/rxdart.dart';
-
+import 'package:rxdart_ext/single.dart';
 
 // 大元のコード
-// Single<List<int>> getActualDataSingle() {
-//   return Single.fromCallable(() => dataProvider.provide())
-//       .subscribeOn(Scheduler.io);
-// }
+Single<List<int>> getActualDataSingle() {
+  return Single.fromCallable(() => dataProvider.provide())
+      .subscribeOn(Scheduler.io);
+}
 
 
 // KISSを踏まえたコード
