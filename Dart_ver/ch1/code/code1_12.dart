@@ -38,8 +38,15 @@ Stream<List<int>> getStubDataStream() {
 
 // KISSではないコード
 // Streamを使用したコードに修正
+// Stream<List<int>> getStubDataStream() {
+//   return Stream.fromFuture(Future(() => [1, 10, 100]));
+// }
+
+// KISSではないコード
+// Streamを使用したコードに修正
+// より見た目を合わせてみた
 Stream<List<int>> getStubDataStream() {
-  return Stream.fromFuture(Future(() => [1, 10, 100]));
+  return Stream.fromFuture(Isolate.run(() => [1, 10, 100]));
 }
 
 // KISSではないコードをより極端にしたもの
