@@ -26,9 +26,9 @@ compute関数：Flutter特有の機能で、別のIsolateで計算集約型の�
 
 // 大元のコード
 // Streamを使用したコード
-Stream<List<int>> getActualDataStream() {
-  return Stream.fromFuture(Isolate.run(() => dataProvider.provide()));
-}
+// Stream<List<int>> getActualDataStream() {
+//   return Stream.fromFuture(Isolate.run(() => dataProvider.provide()));
+// }
 
 // KISSを踏まえたコード
 // Streamを使用したコードに修正
@@ -45,18 +45,18 @@ Stream<List<int>> getStubDataStream() {
 // KISSではないコード
 // Streamを使用したコードに修正
 // より見た目を合わせてみた
-Stream<List<int>> getStubDataStream() {
-  return Stream.fromFuture(Isolate.run(() => [1, 10, 100]));
-}
+// Stream<List<int>> getStubDataStream() {
+//   return Stream.fromFuture(Isolate.run(() => [1, 10, 100]));
+// }
 
 // KISSではないコードをより極端にしたもの
 // Streamを使用したコードに修正
-Stream<List<int>> getStubDataStream() {
-  return Rx.range(1, 2).scan<List<int>>(
-    (List<int> list, int _, int index) => [...list, list.last * 10],
-    [1],
-  ).asBroadcastStream();
-}
+// Stream<List<int>> getStubDataStream() {
+//   return Rx.range(1, 2).scan<List<int>>(
+//     (List<int> list, int _, int index) => [...list, list.last * 10],
+//     [1],
+//   ).asBroadcastStream();
+// }
 
 // 購読処理
 void main() {
