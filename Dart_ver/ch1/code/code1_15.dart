@@ -37,6 +37,49 @@
 //   DateTime? findDueDate(String? bookName) {...}
 // }
 
+/// 単一責任の原則に則ってリファクタリングした例
+class BookModel {
+  final String id;
+  final String name;
+  // その他のプロパティ
+
+  BookModel({required this.id, required this.name /*, その他の必要なパラメータ */});
+}
+
+class UserModel {
+  final String name;
+  // その他のプロパティ
+
+  UserModel({required this.name /*, その他の必要なパラメータ */});
+}
+
+class Entry {
+  final UserModel renter;
+  final DateTime dueDate;
+
+  Entry({required this.renter, required this.dueDate});
+}
+
+class CirculationRecord implements Entry {
+  final Map<BookModel, Entry> onLoanBookEntries;
+
+  CirculationRecord({required this.onLoanBookEntries});
+
+  @override
+  UserModel get renter {
+    // Implement the getter for renter
+    // Return a default value or handle appropriately
+    return UserModel(name: 'default');
+  }
+
+  @override
+  DateTime get dueDate {
+    // Implement the getter for dueDate
+    // Return a default value or handle appropriately
+    return DateTime.now();
+  }
+}
+
 void code1_15() {
   print('code1_15');
 }
