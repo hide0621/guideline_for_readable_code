@@ -1,3 +1,4 @@
+/// 単一責任の原則に則っていない例
 // class Alviss {
 //   // テキスト表示、デバイスの破棄、ロケットの打ち上げ、その他諸々を行うかもれない...
 //   void doEverything(UniverseState state) {
