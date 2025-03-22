@@ -1,8 +1,8 @@
 /**
  * ただし、以下のコードはpubspec.yamlにrxdartの依存関係を追加する必要がある
  */
-import 'package:rxdart/rxdart.dart';
-import 'dart:isolate';
+// import 'package:rxdart/rxdart.dart';
+// import 'dart:isolate';
 
 // import 'package:rxdart_ext/single.dart';
 
